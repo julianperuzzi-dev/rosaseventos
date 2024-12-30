@@ -18,13 +18,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="font-serif">
+    <div className="bg-zinc-900">
       <Navbar />
       <HeroSection />
+      <ParallaxSection />
       <AboutSection />
       <ServicesSection />
       <Reservations/>
-      <ParallaxSection />
+      
       <ContactSection />
       <Footer />
     </div>
