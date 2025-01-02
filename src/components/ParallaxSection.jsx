@@ -9,10 +9,10 @@ const ParallaxSection = () => {
       className="relative flex items-center justify-center bg-cover bg-center"
       bgImageStyle={{ objectFit: 'cover' }} // Asegura que la imagen cubra el área sin estirarse
     >
-      <div className="flex items-center justify-center w-full h-[40vh] md:h-[60vh] ">
+      <div className="flex items-center justify-center w-full h-[40vh]  ">
         <div className="text-center text-white p-4 text-shadow">
           <h2 className="text-3xl md:text-4xl font-bold uppercase ">
-            Converti tu eventos en un momento inolvidable
+            Converti tu evento en un momento inolvidable
           </h2>
         </div>
       </div>

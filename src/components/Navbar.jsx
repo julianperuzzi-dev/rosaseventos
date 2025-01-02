@@ -29,11 +29,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" text-white md:p-8 p-4 fixed top-0 w-full shadow-lg z-50 border-b-4 border-gold bg-gradient-to-b from-black via-black to-black/50">
+    <nav className=" text-white md:p-8 p-4 fixed top-0 w-full shadow-lg z-50 border-b-2 border-zinc-500 bg-gradient-to-b from-black via-zinc-950/90 to-zinc-800/50">
       <div className="container mx-auto flex justify-between items-center text-white">
         {/* Logo con imagen importada */}
         <div className="text-2xl font-bold text-white flex items-center gap-2">
-          <img src={LogoImage} alt="ROSAS EVENTOS Logo" className="h-16" /> {/* Aquí usamos la imagen importada */}
+          <img src={LogoImage} alt="ROSAS EVENTOS Logo" className=" h-8 " /> {/* Aquí usamos la imagen importada */}
           <span className="font-bold">ROSAS EVENTOS</span>
         </div>
 

@@ -11,6 +11,8 @@ import ParallaxSection from "./components/ParallaxSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import Reservations from "./components/Reservations";
+import Gallery from "./components/Gallery";
+import CommentSection from "./components/CommentSection";
 
 const App = () => {
   useEffect(() => {
@@ -18,14 +20,19 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-zinc-900">
+    <div className="bg-gradient-to-br from-black via-zinc-900 to-black">
       <Navbar />
       <HeroSection />
-      <ParallaxSection />
+      
       <AboutSection />
       <ServicesSection />
-      <Reservations/>
+
       
+      <Reservations/>
+      <ParallaxSection />
+      <Gallery/>
+
+      <CommentSection />
       <ContactSection />
       <Footer />
     </div>
