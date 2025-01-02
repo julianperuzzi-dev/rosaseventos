@@ -53,7 +53,7 @@ const CommentSection = () => {
                 <img
                   src={comment.image}
                   alt={`Imagen de ${comment.name}`}
-                  className="w-96 h-32 object-cover gran"
+                  className="w-96 h-32 object-cover"
                 />
               </div>
             </div>
