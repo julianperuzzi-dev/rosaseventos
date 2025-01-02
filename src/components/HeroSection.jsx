@@ -16,7 +16,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden pt-8">
+    <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden ">
       {/* Video de fondo */}
       <video
         autoPlay
