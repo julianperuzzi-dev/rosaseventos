@@ -45,7 +45,7 @@ const HeroSection = () => {
           <img
             src={logoSrc}
             alt="Logo Rosas Eventos"
-            className="w-64 md:w-96 object-contain filter drop-shadow-2xl"
+            className="w-56 md:w-96 object-contain filter drop-shadow-2xl"
           />
         </div>
 
