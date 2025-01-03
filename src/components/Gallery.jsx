@@ -6,25 +6,25 @@ const Gallery = () => {
 
   const imageData = [
     {
-      url: "https://images.pexels.com/photos/3184603/pexels-photo-3184603.jpeg",
+      url: "https://images.pexels.com/photos/4877866/pexels-photo-4877866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Evento Corporativo",
       caption: "Evento Corporativo",
       description: "Transformando espacios corporativos en experiencias memorables",
     },
     {
-      url: "https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg",
+      url: "https://images.pexels.com/photos/17931339/pexels-photo-17931339/free-photo-of-hombre-pareja-mujer-besando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Decoración de Bodas",
       caption: "Decoración de Bodas",
       description: "Creando momentos mágicos para tu día especial",
     },
     {
-      url: "https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg",
+      url: "https://images.pexels.com/photos/2240768/pexels-photo-2240768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Fiesta de Cumpleaños",
       caption: "Fiesta de Cumpleaños",
       description: "Celebraciones únicas llenas de alegría y diversión",
     },
     {
-      url: "https://images.pexels.com/photos/1200261/pexels-photo-1200261.jpeg",
+      url: "https://images.pexels.com/photos/17461673/pexels-photo-17461673/free-photo-of-mujer-fiesta-partido-bailando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Concierto en Vivo",
       caption: "Concierto en Vivo",
       description: "Producción audiovisual de primer nivel",
@@ -36,7 +36,7 @@ const Gallery = () => {
       description: "Iluminando el arte con tecnología de vanguardia",
     },
     {
-      url: "https://images.pexels.com/photos/1679825/pexels-photo-1679825.jpeg",
+      url: "https://images.pexels.com/photos/5638639/pexels-photo-5638639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Reunión Familiar",
       caption: "Reunión Familiar",
       description: "Momentos íntimos con un toque profesional",

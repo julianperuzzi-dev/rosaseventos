@@ -53,7 +53,7 @@ const products = [
     image: "https://images.pexels.com/photos/1047443/pexels-photo-1047443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     specs: [
       { label: "Alcance", value: "Hasta 8m" },
-      { label: "Control", value: "Inalámbrico" },
+      { label: "Control", value: "Wireless" },
       { label: "Capacidad", value: "3L/min" },
     ],
     features: [
@@ -72,7 +72,7 @@ const ServicesSection = () => {
   return (
     <div className="bg-black min-h-[75vh]">
       {/* Hero Section */}
-      <div className="relative h-[65vh]">
+      <div className="relative md:h-[65vh] h-[50vh]">
         <img 
           src={products[activeProduct].image}
           alt={products[activeProduct].name}
@@ -108,7 +108,7 @@ const ServicesSection = () => {
         <div className="max-w-4xl mx-auto px-4">
           <button
             onClick={() => setExpandedFeatures(!expandedFeatures)}
-            className="flex items-center space-x-4 w-full group mb-8"
+            className="flex items-center space-x-4 w-full group md:mb-8 mb-1"
           >
             <div className="flex items-center justify-center w-8 h-8 rounded-full border border-white/20 group-hover:border-white/40 transition-colors">
               {expandedFeatures ? <FiMinus /> : <FiPlus />}
@@ -117,7 +117,7 @@ const ServicesSection = () => {
           </button>
 
           {expandedFeatures && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 pl-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-2 mt-8 pl-12">
               {products[activeProduct].features.map((feature, index) => (
                 <div 
                   key={index}
@@ -140,7 +140,7 @@ const ServicesSection = () => {
               <button
                 key={product.id}
                 onClick={() => setActiveProduct(index)}
-                className={`group p-8 transition-all duration-300 ${
+                className={`group md:p-8 p-3 transition-all duration-300 ${
                   activeProduct === index ? 'bg-zinc-800' : 'hover:bg-zinc-800'
                 }`}
               >

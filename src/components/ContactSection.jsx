@@ -1,115 +1,126 @@
-import React from "react";
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaWhatsapp,
-} from "react-icons/fa";
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Twitter,
+  MessageCircle
+} from 'lucide-react';
 
 const ContactSection = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   return (
-    <section id="contact" className="py-20  text-white md:min-h-screen md:py-40">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Imagen y Mapa de Lado */}
-        <div className="hidden md:flex flex-col gap-6">
-          <img
-            src="https://images.pexels.com/photos/246972/pexels-photo-246972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Contáctanos"
-            className="rounded-lg shadow-lg object-cover h-96 w-full border-4 border-stone-600"
-          />
+    <section className="relative min-h-screen bg-black text-white">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      </div>
 
-          {/* Mapa de Google embebido */}
-          <div className="rounded-lg overflow-hidden shadow-lg border-4 border-stone-600">
-            <iframe
-              title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.557736501233!2d-68.57650632578754!3d-31.5378757082577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96815022d91f615f%3A0xe70f25631ba7a5c9!2sSan%20Juan%2C%20Argentina!5e0!3m2!1ses!2sar!4v1693930272815!5m2!1ses!2sar"
-              className="w-full h-72 border-none"
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
+      <div className="relative z-10 container mx-auto px-4 py-24">
+        <motion.div 
+          className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Left Column - Contact Info */}
+          <div className="space-y-12">
+            <motion.div {...fadeInUp}>
+              <h2 className="text-4xl sm:text-5xl font-medium mb-6">Conecta con Nosotros</h2>
+              <p className="text-lg text-white/80 leading-relaxed">
+                Estamos aquí para transformar tus ideas en realidad. Contacta con nuestro equipo para comenzar tu próximo proyecto.
+              </p>
+            </motion.div>
 
-        {/* Sección de Contacto */}
-        <div className="flex flex-col justify-center text-center md:text-left bg-black p-8 rounded-lg shadow-lg border-4 border-stone-600 mx-3 md:mx-0">
-          <h2 className="text-4xl font-bold mb-6 text-stoneborder-stone-600">Contáctanos</h2>
-          <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-200">
-            ¡Estamos aquí para ayudarte! Si tienes preguntas o deseas trabajar con nosotros, no dudes en contactarnos a través de nuestras redes sociales o WhatsApp.
-          </p>
+            <motion.div 
+              className="space-y-6"
+              {...fadeInUp}
+            >
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/60">Llámanos</p>
+                  <p className="text-lg">+54 123 456 789</p>
+                </div>
+              </div>
 
-          {/* Información de Contacto */}
-          <div className="mb-8 space-y-4">
-            <div className="flex items-center space-x-4">
-              <FaPhone className="text-stoneborder-stone-600 text-xl" />
-              <p className="text-lg text-white">+54 123 456 789</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <FaEnvelope className="text-stoneborder-stone-600 text-xl" />
-              <p className="text-lg text-white">info@tuempresa.com</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <FaMapMarkerAlt className="text-stoneborder-stone-600 text-xl" />
-              <p className="text-lg text-white">San Juan, Argentina</p>
-            </div>
-          </div>
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/60">Email</p>
+                  <p className="text-lg">info@tuempresa.com</p>
+                </div>
+              </div>
 
-          {/* Redes Sociales y WhatsApp */}
-          <div className="flex space-x-4 mb-8 justify-center md:justify-start">
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stoneborder-stone-600 hover:text-white transition duration-300"
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/60">Ubicación</p>
+                  <p className="text-lg">San Juan, Argentina</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="flex space-x-6"
+              {...fadeInUp}
             >
-              <FaWhatsapp size={24} />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stoneborder-stone-600 hover:text-white transition duration-300"
-            >
-              <FaInstagram size={24} />
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stoneborder-stone-600 hover:text-white transition duration-300"
-            >
-              <FaFacebookF size={24} />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stoneborder-stone-600 hover:text-white transition duration-300"
-            >
-              <FaTwitter size={24} />
-            </a>
+              {[Instagram, Facebook, Twitter, MessageCircle].map((Icon, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                >
+                  <Icon className="w-6 h-6" />
+                </a>
+              ))}
+            </motion.div>
           </div>
 
-          {/* Botones Prioritarios */}
-          <a
-            href="https://wa.me/1234567890"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block border  border-stone-600  py-3 px-6 rounded-full shadow-lg hover:scale-110 transition duration-300 mb-4 w-full text-center md:w-fit"
+          {/* Right Column - Map */}
+          <motion.div 
+            className="space-y-8"
+            {...fadeInUp}
           >
-            Escríbenos por WhatsApp
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-black text-stoneborder-stone-600 border border-stone-600 py-3 px-6 rounded-full shadow-lg hover:scale-110  transition duration-300 w-full text-center md:w-fit"
-          >
-            Contáctanos por Instagram
-          </a>
-        </div>
+            <div className="rounded-lg overflow-hidden h-[400px] bg-white/5 backdrop-blur-lg">
+              <iframe
+                title="Ubicación"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.557736501233!2d-68.57650632578754!3d-31.5378757082577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96815022d91f615f%3A0xe70f25631ba7a5c9!2sSan%20Juan%2C%20Argentina!5e0!3m2!1ses!2sar!4v1693930272815!5m2!1ses!2sar"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-white text-black px-8 py-3 rounded text-sm hover:bg-white/90 transition-colors duration-300 flex-1">
+                Agendar Reunión
+              </button>
+              <button className="bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded text-sm hover:bg-white/20 transition-colors duration-300 flex-1">
+                WhatsApp Directo
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,0 +1,234 @@
+# Guía de Estilo Tesla-Inspired para React Components
+
+## 1. Paleta de Colores
+
+### Colores Primarios
+```css
+/* Fondo principal */
+bg-black
+
+/* Texto principal */
+text-white
+
+/* Acentos */
+bg-white
+text-black
+```
+
+### Sistema de Transparencias
+```css
+/* Overlays y fondos */
+bg-black/70  /* Overlay principal */
+bg-white/10  /* Elementos interactivos */
+bg-white/20  /* Estado hover */
+bg-white/5   /* Elementos sutiles */
+
+/* Texto con transparencia */
+text-white/80  /* Texto secundario */
+text-white/60  /* Texto terciario */
+text-white/40  /* Texto disabled */
+```
+
+## 2. Tipografía
+
+### Jerarquía de Textos
+```css
+/* Títulos principales */
+text-4xl sm:text-5xl font-medium
+
+/* Subtítulos */
+text-2xl sm:text-3xl font-medium
+
+/* Texto body principal */
+text-lg leading-relaxed
+
+/* Texto secundario */
+text-sm text-white/60
+```
+
+## 3. Espaciado y Layout
+
+### Sistema de Grid
+```css
+/* Container principal */
+container mx-auto px-4
+
+/* Grid de dos columnas */
+grid grid-cols-1 lg:grid-cols-2 gap-16
+
+/* Grid de tres columnas */
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
+```
+
+### Espaciado
+```css
+/* Secciones */
+py-24  /* Padding vertical */
+space-y-12  /* Espaciado entre elementos */
+gap-8  /* Gap en grids */
+
+/* Componentes */
+p-6  /* Padding interno */
+space-x-4  /* Espaciado horizontal */
+```
+
+## 4. Efectos y Animaciones
+
+### Framer Motion Presets
+```jsx
+// Fade In Up
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+};
+
+// Fade In
+const fadeIn = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.8 }
+};
+
+// Stagger Children
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+```
+
+### Transiciones y Hover
+```css
+/* Transiciones suaves */
+transition-all duration-300
+
+/* Efectos hover */
+hover:bg-white/20
+hover:scale-105
+group-hover:bg-white/20
+```
+
+## 5. Componentes Base
+
+### Botones
+```jsx
+// Botón primario
+<button className="bg-white text-black px-8 py-3 rounded text-sm hover:bg-white/90 transition-colors duration-300">
+  Texto del botón
+</button>
+
+// Botón secundario
+<button className="bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded text-sm hover:bg-white/20 transition-colors duration-300">
+  Texto del botón
+</button>
+```
+
+### Cards
+```jsx
+// Card base
+<div className="bg-white/5 backdrop-blur-lg rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
+  {/* Contenido */}
+</div>
+```
+
+### Iconos
+```jsx
+// Icono circular
+<div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+  <Icon className="w-6 h-6" />
+</div>
+```
+
+## 6. Estructura de Secciones
+
+### Layout Base
+```jsx
+<section className="relative min-h-screen bg-black text-white">
+  {/* Background con overlay */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/path/to/image"
+      alt="Background"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+  </div>
+
+  {/* Contenido */}
+  <div className="relative z-10 container mx-auto px-4 py-24">
+    {/* Componentes */}
+  </div>
+</section>
+```
+
+## 7. Efectos Glassmorphism
+
+### Elementos con Blur
+```css
+/* Base glassmorphism */
+bg-white/10 backdrop-blur-lg
+
+/* Variaciones */
+bg-white/5 backdrop-blur-sm  /* Sutil */
+bg-white/20 backdrop-blur-md /* Pronunciado */
+```
+
+## 8. Responsive Design
+
+### Breakpoints
+```css
+/* Mobile first */
+sm:  /* 640px */
+md:  /* 768px */
+lg:  /* 1024px */
+xl:  /* 1280px */
+2xl: /* 1536px */
+```
+
+## 9. Importaciones Necesarias
+
+```jsx
+// Framer Motion
+import { motion } from 'framer-motion';
+
+// Lucide Icons
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  /* etc */ 
+} from 'lucide-react';
+
+// Shadcn Components
+import {
+  Card,
+  Button,
+  /* etc */
+} from '@/components/ui';
+```
+
+## 10. Mejores Prácticas
+
+1. **Consistencia Visual**
+   - Usar siempre los mismos valores de transparencia
+   - Mantener la misma escala de espaciado
+   - Respetar la jerarquía tipográfica
+
+2. **Animaciones**
+   - Usar Framer Motion para animaciones complejas
+   - Mantener las duraciones consistentes (0.3s para hover, 0.6-0.8s para entrada)
+   - Implementar animaciones sutiles y profesionales
+
+3. **Responsividad**
+   - Diseñar mobile-first
+   - Usar los breakpoints establecidos
+   - Mantener proporciones consistentes en todos los dispositivos
+
+4. **Performance**
+   - Optimizar imágenes
+   - Usar lazy loading cuando sea posible
+   - Minimizar el uso de efectos pesados en mobile
