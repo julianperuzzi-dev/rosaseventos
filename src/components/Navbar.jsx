@@ -1,77 +1,141 @@
-import React, { useState, useEffect, useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import LogoImage from "../assets/logo rosas.png"; // Asegúrate de importar la imagen
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo rosas.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (isOpen && menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false);
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const menuItems = [
+    { href: '#hero', label: 'Inicio' },
+    { href: '#about', label: 'Sobre Nosotros' },
+    { href: '#services', label: 'Productos' },
+    { href: '#contact', label: 'Contacto' }
+  ];
+
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      x: '100%',
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
       }
-    };
-
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [isOpen]);
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
+    },
+    open: {
+      opacity: 1,
+      x: '0%',
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    }
   };
 
   return (
-    <nav className=" text-white md:p-8 p-4 fixed top-0 w-full shadow-lg z-50 border-b-2 border-zinc-500 bg-gradient-to-b from-black via-zinc-950/90 to-zinc-800/50">
-      <div className="container mx-auto flex justify-between items-center text-white">
-        {/* Logo con imagen importada */}
-        <div className="text-2xl font-bold text-white flex items-center gap-2">
-          <img src={LogoImage} alt="ROSAS EVENTOS Logo" className=" h-8 " /> {/* Aquí usamos la imagen importada */}
-          <span className="font-bold">ROSAS EVENTOS</span>
-        </div>
+    <motion.nav
+      className={`fixed w-full z-50 transition-colors duration-300 ${
+        scrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <motion.div 
+            className="flex items-center space-x-4"
+            whileHover={{ scale: 1.02 }}
+          >
+            <img 
+              src={logo}
+              alt="ROSAS EVENTOS" 
+              className="h-8 w-auto" 
+            />
+            <span className="text-white  text-xl">ROSAS EVENTOS</span>
+          </motion.div>
 
-        {/* Icono del menú (visible en móvil) */}
-        <div className="md:hidden" onClick={toggleMenu}>
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </div>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            {menuItems.map((item) => (
+              <motion.a
+                key={item.href}
+                href={item.href}
+                className="text-white/90 hover:text-white transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item.label}
+              </motion.a>
+            ))}
+            <motion.button
+              className="bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded hover:bg-white/20 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Reservar
+            </motion.button>
+          </div>
 
-        {/* Menú de navegación */}
-        <ul
-          ref={menuRef}
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:flex absolute md:relative top-16 md:top-0 left-0 md:left-auto bg-neutral-800/70 md:space-x-8 md:bg-transparent w-full md:w-auto p-4 md:p-0`}
-        >
-          <li className="my-2 md:my-0">
-            <a href="#hero" className="hover:text-gray-300" onClick={handleLinkClick}>
-              Inicio
-            </a>
-          </li>
-          <li className="my-2 md:my-0">
-            <a href="#about" className="hover:text-gray-300" onClick={handleLinkClick}>
-              Sobre Nosotros
-            </a>
-          </li>
-          <li className="my-2 md:my-0">
-            <a href="#services" className="hover:text-gray-300" onClick={handleLinkClick}>
-              Productos
-            </a>
-          </li>
-          <li className="my-2 md:my-0">
-            <a href="#contact" className="hover:text-gray-300" onClick={handleLinkClick}>
-              Contacto
-            </a>
-          </li>
-        </ul>
+          {/* Mobile Menu Button */}
+          <motion.button
+            className="md:hidden text-white p-2"
+            onClick={() => setIsOpen(!isOpen)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </motion.button>
+        </div>
       </div>
-    </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black/95 backdrop-blur-lg z-40"
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+          >
+            <div className="flex flex-col items-center justify-center h-full space-y-8">
+              {menuItems.map((item) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  className="text-white text-2xl font-medium"
+                  onClick={() => setIsOpen(false)}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+              <motion.button
+                className="bg-white text-black px-8 py-3 rounded text-lg mt-4"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Reservar
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };
 
