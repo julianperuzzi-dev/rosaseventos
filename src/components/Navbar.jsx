@@ -105,7 +105,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/95 backdrop-blur-lg z-40"
+            className="absolute top-4 w-full h-svh bg-black/95 backdrop-blur-lg z-40"
             initial="closed"
             animate="open"
             exit="closed"
