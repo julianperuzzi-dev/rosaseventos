@@ -70,7 +70,7 @@ const AboutSection = () => {
                 producción integral de eventos.
               </p>
               <p className="leading-relaxed">
-                Con más de <span className="font-normal">10 años de experiencia</span> en 
+                Con más de <span className="font-normal">5 años de experiencia</span> en 
                 la industria, nuestro equipo de expertos ha perfeccionado el arte de 
                 crear momentos inolvidables, desde bodas íntimas hasta grandes 
                 eventos corporativos.
@@ -80,11 +80,11 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 py-8">
               <div>
-                <h3 className="text-3xl font-light">10+</h3>
+                <h3 className="text-3xl font-light">5+</h3>
                 <p className="text-gray-400">Años de experiencia</p>
               </div>
               <div>
-                <h3 className="text-3xl font-light">500+</h3>
+                <h3 className="text-3xl font-light">100+</h3>
                 <p className="text-gray-400">Eventos realizados</p>
               </div>
               <div>
