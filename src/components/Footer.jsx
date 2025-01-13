@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-black text-white py-24">
+    <footer className="relative bg-gradient-to-br from-black via-zinc-800 to-black text-white py-24">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
