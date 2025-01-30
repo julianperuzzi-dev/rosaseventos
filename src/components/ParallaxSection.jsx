@@ -12,7 +12,7 @@ const ParallaxSection = () => {
       <div className="flex items-center justify-center w-full h-[40vh]  ">
         <div className="text-center text-white p-4 text-shadow">
           <h2 className="text-3xl md:text-4xl font-bold uppercase ">
-            Converti tu evento en un momento inolvidable
+            tu evento inolvidable
           </h2>
         </div>
       </div>
