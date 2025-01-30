@@ -23,7 +23,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-90 "
       >
         <source
           src="https://videos.pexels.com/video-files/6558963/6558963-hd_1920_1080_25fps.mp4"
@@ -33,7 +33,7 @@ const HeroSection = () => {
       </video>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-zinc-950 opacity-80" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-40" />
 
       {/* Contenido Principal */}
@@ -90,7 +90,7 @@ const HeroSection = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-zinc-950 to-transparent" />
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent" />
     </div>
   );

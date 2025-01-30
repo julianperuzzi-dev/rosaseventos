@@ -45,9 +45,9 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="relative bg-black py-24">
+    <section className="relative py-24">
       {/* Background con efecto de gradiente */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-black to-zinc-900 opacity-90" />
+      <div className="absolute inset-0  " />
 
       <div className="relative container mx-auto px-4">
         {/* Header */}

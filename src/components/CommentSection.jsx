@@ -27,7 +27,7 @@ const CommentSection = () => {
 
   return (
     <div className="min-h-[75vh] py-16">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto md:px-12 px-2">
         {/* Título de los comentarios */}
         <h2 className="text-4xl font-extralight text-white text-center mb-12">
           Comentarios
@@ -38,7 +38,7 @@ const CommentSection = () => {
           {comments.map((comment) => (
             <div
               key={comment.id}
-              className="bg-zinc-800/90 md:p-8 p-4 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl border-l-4 border-transparent hover:border-yellow-500 flex items-center"
+              className="bg-zinc-800/90 md:pl-8 md:pr-0 md:py-0 p-4 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl border-l-4 border-transparent hover:border-yellow-500 flex items-center"
             >
               {/* Contenedor para texto y estrella */}
               <div className="flex-1 text-white">
@@ -49,11 +49,11 @@ const CommentSection = () => {
               </div>
 
               {/* Imagen, solo visible en pantallas grandes */}
-              <div className="hidden lg:block ml-6">
+              <div className="hidden md:block">
                 <img
                   src={comment.image}
                   alt={`Imagen de ${comment.name}`}
-                  className="w-96 h-40 object-cover rounded-ss-xl"
+                  className="w-96 h-48 object-cover rounded-l-xl"
                 />
               </div>
             </div>

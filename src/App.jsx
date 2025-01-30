@@ -13,6 +13,8 @@ import Footer from "./components/Footer";
 import Reservations from "./components/Reservations";
 import Gallery from "./components/Gallery";
 import CommentSection from "./components/CommentSection";
+import GallerySection from "./components/GallerySection";
+import FAQ from "./components/FAQ";
 
 const App = () => {
   useEffect(() => {
@@ -26,14 +28,17 @@ const App = () => {
       
       <AboutSection />
       <ServicesSection />
-
+      
       
       <Reservations/>
       <ParallaxSection />
+      <GallerySection/>
       <Gallery/>
 
       <CommentSection />
       <ContactSection />
+      
+      <FAQ />
       <Footer />
     </div>
   );

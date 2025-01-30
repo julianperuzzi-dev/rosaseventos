@@ -5,3 +5,21 @@
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Ocultar la barra de scroll */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Efecto hover para flechas */
+.hover-effect {
+  transition: background-color 0.3s ease;
+}
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
