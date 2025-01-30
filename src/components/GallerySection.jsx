@@ -68,7 +68,7 @@ const HorizontalGallery = () => {
   return (
     <div className="relative h-[80vh] w-full  overflow-hidden">
       {/* Título de la galería */}
-      <h1 className="absolute font-semibold top-8 md:top-20 left-1/2 transform -translate-x-1/2 text-4xl sm:text-5xl  text-white z-20 text-center">
+      <h1 className="absolute md:font-semibold font-extralight top-8 md:top-20 left-1/2 transform -translate-x-1/2 text-4xl sm:text-5xl  text-white z-20 text-center">
         Equipos Profesionales
       </h1>
 
