@@ -82,7 +82,7 @@ const HorizontalGallery = () => {
               initial="hidden"
               whileInView="visible"
               variants={imageVariants}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               {/* Imagen de fondo con efecto de parallax */}
               <motion.img
