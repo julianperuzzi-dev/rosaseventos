@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
 
             <a
-              href="https://wa.me/5492644529390" // Reemplaza con tu número de WhatsApp
+              href="https://wa.me/5492644529390" 
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-2 px-8 py-3 
@@ -48,10 +48,9 @@ const Footer = () => {
             <h3 className="text-3xl font-medium">Síguenos</h3>
             <div className="flex gap-6">
               {[
-                { Icon: FaFacebook, label: "Facebook", href: "https://facebook.com" },
-                { Icon: FaTwitter, label: "Twitter", href: "https://twitter.com" },
-                { Icon: FaLinkedin, label: "LinkedIn", href: "https://linkedin.com" },
-                { Icon: FaInstagram, label: "Instagram", href: "https://instagram.com" },
+                { Icon: FaFacebook, label: "Facebook", href: "https://www.facebook.com/p/Rosas-Eventos-100064469211261" },
+
+                { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/rosas.eventos.sj" },
               ].map(({ Icon, label, href }) => (
                 <a
                   key={label}
@@ -86,7 +85,7 @@ const Footer = () => {
                 Términos
               </a>
               <a
-                href="https://julianperuzzi.dev"
+                href="https://www.instagram.com/julianperuzzi.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"

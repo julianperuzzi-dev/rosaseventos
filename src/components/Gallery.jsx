@@ -1,53 +1,53 @@
 import React, { useState } from "react";
-import { FiCamera} from "react-icons/fi";
+import { FiCamera } from "react-icons/fi";
 
 const Gallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const imageData = [
     {
-      url: "https://images.pexels.com/photos/4877866/pexels-photo-4877866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      url: "https://images.pexels.com/photos/11055637/pexels-photo-11055637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Boda Elegante",
+      caption: "Boda Elegante",
+      description: "Celebraciones únicas que reflejan el amor y la elegancia.",
+    },
+    {
+      url: "https://images.pexels.com/photos/20380887/pexels-photo-20380887/free-photo-of-mujer-fiesta-partido-modelo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Cumpleaños de Quince",
+      caption: "Cumpleaños de Quince",
+      description: "Transformamos tus sueños en una fiesta inolvidable.",
+    },
+    {
+      url: "https://images.pexels.com/photos/2419568/pexels-photo-2419568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Cumpleaños de 80 Años",
+      caption: "Cumpleaños de 80 Años",
+      description: "Celebrando una vida llena de momentos especiales.",
+    },
+    {
+      url: "https://images.pexels.com/photos/30505247/pexels-photo-30505247/free-photo-of-lively-night-party-with-dancing-attendees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Aniversario de Bodas",
+      caption: "Aniversario de Bodas",
+      description: "Renovando votos con estilo y sofisticación.",
+    },
+   
+    {
+      url: "https://images.pexels.com/photos/6224694/pexels-photo-6224694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Evento Corporativo",
       caption: "Evento Corporativo",
-      description: "Transformando espacios corporativos en experiencias memorables",
+      description: "Experiencias profesionales que inspiran.",
     },
     {
-      url: "https://images.pexels.com/photos/17931339/pexels-photo-17931339/free-photo-of-hombre-pareja-mujer-besando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Decoración de Bodas",
-      caption: "Decoración de Bodas",
-      description: "Creando momentos mágicos para tu día especial",
+      url: "https://images.pexels.com/photos/19326359/pexels-photo-19326359/free-photo-of-mujer-fiesta-partido-bailando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Fiesta de Inauguración",
+      caption: "Fiesta de Inauguración",
+      description: "Celebrando nuevos comienzos con elegancia.",
     },
-    {
-      url: "https://images.pexels.com/photos/2240768/pexels-photo-2240768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Fiesta de Cumpleaños",
-      caption: "Fiesta de Cumpleaños",
-      description: "Celebraciones únicas llenas de alegría y diversión",
-    },
-    {
-      url: "https://images.pexels.com/photos/17461673/pexels-photo-17461673/free-photo-of-mujer-fiesta-partido-bailando.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Concierto en Vivo",
-      caption: "Concierto en Vivo",
-      description: "Producción audiovisual de primer nivel",
-    },
-    {
-      url: "https://images.pexels.com/photos/3626621/pexels-photo-3626621.jpeg",
-      alt: "Exposición de Arte",
-      caption: "Exposición de Arte",
-      description: "Iluminando el arte con tecnología de vanguardia",
-    },
-    {
-      url: "https://images.pexels.com/photos/5638639/pexels-photo-5638639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Reunión Familiar",
-      caption: "Reunión Familiar",
-      description: "Momentos íntimos con un toque profesional",
-    }
-
   ];
 
   return (
-    <section className="relative py-24">
+    <section id="gallery" className="relative py-24">
       {/* Background con efecto de gradiente */}
-      <div className="absolute inset-0  " />
+      <div className="absolute inset-0" />
 
       <div className="relative container mx-auto px-4">
         {/* Header */}
@@ -85,7 +85,6 @@ const Gallery = () => {
                 <p className="text-gray-300 font-light mb-4">
                   {image.description}
                 </p>
-
               </div>
 
               {/* Indicador de hover */}

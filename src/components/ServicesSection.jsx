@@ -16,7 +16,7 @@ const products = [
     description: "Sistema de iluminación de última generación con control total sobre la atmósfera de tu evento.",
     icon: FiZap,
     image: "https://images.pexels.com/photos/9376869/pexels-photo-9376869.jpeg",
-    price: "$9,999",
+    price: "$199.000",
     specs: [
       { label: "Potencia", value: "100,000 Lumens" },
       { label: "Control", value: "DMX512 / WiFi" },
@@ -35,7 +35,7 @@ const products = [
     description: "Experiencia sonora inmersiva con la más alta fidelidad y potencia del mercado.",
     icon: FiMusic,
     image: "https://images.pexels.com/photos/14536014/pexels-photo-14536014.jpeg",
-    price: "$12,999",
+    price: "$249.000",
     specs: [
       { label: "Potencia", value: "10,000W RMS" },
       { label: "Respuesta", value: "20Hz-20kHz" },
@@ -54,7 +54,7 @@ const products = [
     description: "Elementos visuales y efectos atmosféricos que transformarán tu evento en una experiencia única.",
     icon: FiActivity,
     image: "https://images.pexels.com/photos/1047443/pexels-photo-1047443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: "$7,999",
+    price: "$79.000",
     specs: [
       { label: "Alcance", value: "Hasta 8m" },
       { label: "Control", value: "Wireless" },

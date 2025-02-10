@@ -15,6 +15,8 @@ import Gallery from "./components/Gallery";
 import CommentSection from "./components/CommentSection";
 import GallerySection from "./components/GallerySection";
 import FAQ from "./components/FAQ";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
+
 
 const App = () => {
   useEffect(() => {
@@ -36,10 +38,14 @@ const App = () => {
       <Gallery/>
 
       <CommentSection />
+      
       <ContactSection />
+
       
       <FAQ />
+      <FloatingWhatsApp />
       <Footer />
+
     </div>
   );
 };

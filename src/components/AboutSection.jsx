@@ -41,7 +41,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="relative bg-black text-white overflow-hidden">
+    <section id="about" className="relative bg-black text-white overflow-hidden">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black opacity-90" />
 
@@ -147,7 +147,7 @@ const AboutSection = () => {
               variants={fadeInUp}
             >
               <motion.a
-                href="tel:+542644529390"
+                href="tel:2644529390"
                 className="group flex items-center justify-center sm:justify-start space-x-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >

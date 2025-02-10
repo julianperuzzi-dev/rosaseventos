@@ -10,7 +10,7 @@ const faqData = [
       "Puedes reservar tu equipo directamente a través de nuestra página web o contactándonos por WhatsApp para asistencia personalizada.",
     action: {
       text: "Reservar ahora",
-      link: "https://wa.me/1234567890", // Reemplaza con tu número de WhatsApp
+      link: "https://wa.me/+5492644529390", // Reemplaza con tu número de WhatsApp
     },
   },
   {
@@ -29,7 +29,7 @@ const faqData = [
       "Sí, ofrecemos descuentos especiales para eventos grandes. Contáctanos para obtener una cotización personalizada.",
     action: {
       text: "Contactar por WhatsApp",
-      link: "https://wa.me/1234567890", // Reemplaza con tu número de WhatsApp
+      link: "https://wa.me/+5492644529390", // Reemplaza con tu número de WhatsApp
     },
   },
   {

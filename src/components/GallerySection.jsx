@@ -3,17 +3,12 @@ import { motion } from "framer-motion";
 
 // URLs de las imágenes (puedes reemplazarlas con las URLs reales)
 const images = [
+ 
   {
-    url: "https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg",
-    title: "Equipo Profesional",
-    alt: "Equipo profesional de Rosas Eventos",
-    description: "Contamos con equipos de última generación para eventos exclusivos.",
-  },
-  {
-    url: "https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg",
-    title: "Equipo Premium",
+    url: "https://images.pexels.com/photos/5156616/pexels-photo-5156616.jpeg",
+    title: "Efectos Especiales",
     alt: "Equipo premium de Rosas Eventos",
-    description: "Nuestros equipos premium ofrecen calidad y elegancia inigualables.",
+    description: "Personaliza tu evento, carteles de neon, maquinas de humo, etc.",
   },
   {
     url: "https://images.pexels.com/photos/373632/pexels-photo-373632.jpeg",
@@ -22,10 +17,16 @@ const images = [
     description: "Sonido cristalino y potente para cualquier tipo de evento.",
   },
   {
-    url: "https://i.pinimg.com/736x/d3/28/85/d328851933d85cc1d7b9ad93b18cd4ef.jpg",
+    url: "https://images.pexels.com/photos/976862/pexels-photo-976862.jpeg",
     title: "Equipo de Iluminación",
     alt: "Equipo de iluminación de Rosas Eventos",
     description: "Iluminación espectacular que transforma cualquier espacio.",
+  },
+  {
+    url: "https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg",
+    title: "Equipos de última generación para eventos exclusivos",
+    alt: "Equipo profesional de Rosas Eventos",
+    description: "",
   },
 ];
 

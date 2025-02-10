@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react'; // Agregamos el ícono de Calendar
 import logo from '../assets/logo rosas.png';
 
 const Navbar = () => {
@@ -20,8 +20,9 @@ const Navbar = () => {
   const menuItems = [
     { href: '#hero', label: 'Inicio' },
     { href: '#about', label: 'Sobre Nosotros' },
-    { href: '#services', label: 'Productos' },
-    { href: '#contact', label: 'Contacto' }
+    { href: '#services', label: 'Servicios' },
+    { href: '#gallery', label: 'Galería' }, // Nueva sección
+    { href: '#reservations', label: 'Contacto' },
   ];
 
   const menuVariants = {
@@ -30,23 +31,23 @@ const Navbar = () => {
       x: '100%',
       transition: {
         duration: 0.3,
-        ease: 'easeInOut'
-      }
+        ease: 'easeInOut',
+      },
     },
     open: {
       opacity: 1,
       x: '0%',
       transition: {
         duration: 0.3,
-        ease: 'easeInOut'
-      }
-    }
+        ease: 'easeInOut',
+      },
+    },
   };
 
   return (
     <motion.nav
-      className={`fixed w-full z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -55,16 +56,16 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             className="flex items-center space-x-4"
             whileHover={{ scale: 1.02 }}
           >
-            <img 
+            <img
               src={logo}
-              alt="ROSAS EVENTOS" 
-              className="h-8 w-auto" 
+              alt="ROSAS EVENTOS"
+              className="h-10 w-auto" // Ajustamos el tamaño del logo
             />
-            <span className="text-white  text-xl">ROSAS EVENTOS</span>
+            <span className="text-white text-xl font-light">ROSAS EVENTOS</span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -73,20 +74,22 @@ const Navbar = () => {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="text-white/90 hover:text-white transition-colors"
+                className="text-white/90 hover:text-white transition-colors font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.label}
               </motion.a>
             ))}
-            <motion.button
-              className="bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded hover:bg-white/20 transition-colors"
+            <motion.a
+              href="#reservations" // Enlace a la sección de reservas
+              className="flex items-center bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
+              <Calendar className="w-5 h-5 mr-2" /> {/* Ícono de reserva */}
               Reservar
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,13 +108,13 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute top-4 w-full h-svh bg-black/95 backdrop-blur-lg z-40"
+            className="fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-lg z-40"
             initial="closed"
             animate="open"
             exit="closed"
             variants={menuVariants}
           >
-            <div className="flex flex-col items-center justify-center h-full space-y-8">
+            <div className="flex flex-col items-center justify-center h-full space-y-8 p-4">
               {menuItems.map((item) => (
                 <motion.a
                   key={item.href}
@@ -124,13 +127,15 @@ const Navbar = () => {
                   {item.label}
                 </motion.a>
               ))}
-              <motion.button
-                className="bg-white text-black px-8 py-3 rounded text-lg mt-4"
+              <motion.a
+                href="#reservations" // Enlace a la sección de reservas
+                className="flex items-center bg-white text-black px-8 py-3 rounded text-lg mt-4"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                <Calendar className="w-5 h-5 mr-2" /> {/* Ícono de reserva */}
                 Reservar
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         )}

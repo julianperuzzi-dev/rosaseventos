@@ -16,7 +16,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden ">
+    <div id="hero" className="relative h-screen flex flex-col items-center justify-center overflow-hidden ">
       {/* Video de fondo */}
       <video
         autoPlay
@@ -26,14 +26,15 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover opacity-90 "
       >
         <source
-          src="https://videos.pexels.com/video-files/6558963/6558963-hd_1920_1080_25fps.mp4"
+          // src="https://videos.pexels.com/video-files/6558963/6558963-hd_1920_1080_25fps.mp4"
+          src="https://videos.pexels.com/video-files/3188991/3188991-hd_1920_1080_25fps.mp4"
           type="video/mp4"
         />
         Tu navegador no soporta el elemento de video.
       </video>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-zinc-950 opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-zinc-950 opacity-80" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-40" />
 
       {/* Contenido Principal */}
@@ -45,7 +46,7 @@ const HeroSection = () => {
           <img
             src={logoSrc}
             alt="Logo Rosas Eventos"
-            className="w-56 md:w-96 object-contain filter drop-shadow-2xl"
+            className="w-56 md:w-80 object-contain filter drop-shadow-2xl"
           />
         </div>
 
