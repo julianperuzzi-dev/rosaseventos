@@ -6,7 +6,6 @@ import {
   MapPin,
   Instagram,
   Facebook,
-  Twitter,
   MessageCircle
 } from 'lucide-react';
 
@@ -110,10 +109,10 @@ const CombinedContactSection = () => {
             </motion.div>
 
             <motion.div className="flex space-x-6" {...fadeInUp}>
-              {[Instagram, Facebook, Twitter, MessageCircle].map((Icon, index) => (
+              {[Instagram, Facebook, MessageCircle].map((Icon, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="https://www.instagram.com/rosas.eventos.sj/"
                   className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
                 >
                   <Icon className="w-6 h-6" />

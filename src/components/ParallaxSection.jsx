@@ -6,8 +6,8 @@ const ParallaxSection = () => {
     <Parallax
       bgImage="https://images.pexels.com/photos/30505250/pexels-photo-30505250/free-photo-of-joyful-outdoor-wedding-reception-celebration.jpeg"
       strength={300}
-      className="relative flex items-center justify-center bg-cover bg-center bg-black "
-      bgImageStyle={{ objectFit: 'cover' }} // Asegura que la imagen cubra el área sin estirarse
+      className="relative flex items-center justify-center bg-cover bg-center bg-black mb-20"
+      bgImageStyle={{ objectFit: 'cover' }} 
     >
       <div className="flex items-center justify-center w-full md:h-[60vh] h-[40vh] ">
         <div className="text-center text-white p-4 text-shadow">

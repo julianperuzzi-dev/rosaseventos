@@ -23,12 +23,12 @@ const FloatingWhatsApp = () => {
     >
       <button
         onClick={handleClick}
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center group relative transition-all duration-300 hover:scale-110"
+        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center group relative transition-all duration-300 hover:scale-105"
         aria-label="Contactar por WhatsApp"
       >
         <FaWhatsapp className="w-8 h-8" />
-        <span className="absolute right-full mr-4 bg-white text-gray-800 px-4 py-2 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
-          ¡Chatea con nosotros!
+        <span className="absolute right-full mr-2 bg-green-950  text-emerald-400 px-4 py-2 rounded-lg text-sm  opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+          Contactanos!
         </span>
       </button>
     </motion.div>

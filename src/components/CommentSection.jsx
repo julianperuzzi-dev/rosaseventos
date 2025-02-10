@@ -45,23 +45,23 @@ const CommentSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 py-16">
-      <div className="container mx-auto md:px-12 px-4">
-        <h2 className="text-5xl font-light text-white text-center mb-16">
+    <div className="min-h-screen bg-zinc-900 py-8 sm:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white text-center mb-8 sm:mb-16">
           Experiencias Inolvidables
         </h2>
         
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {comments.map((comment) => (
             <div
               key={comment.id}
-              className="bg-zinc-800/90 rounded-xl shadow-xl transform transition-all duration-300 hover:scale-102 group"
+              className="bg-zinc-800/90 rounded-xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] group"
             >
-              <div className="flex flex-col md:flex-row h-64">
-                <div className="md:w-2/3 p-8">
-                  <div className="flex items-start justify-between">
+              <div className="flex flex-col sm:flex-row md:h-64">
+                <div className="sm:w-full lg:w-2/3 p-4 sm:p-6 lg:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                     <div>
-                      <h3 className="text-2xl font-semibold text-white">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-white break-words">
                         {comment.name}
                       </h3>
                       <p className="text-yellow-500 text-sm mt-1">
@@ -73,12 +73,12 @@ const CommentSection = () => {
                     </span>
                   </div>
                   
-                  <p className="mt-4 text-gray-300 text-lg leading-relaxed">
+                  <p className="mt-4 text-gray-300 text-base sm:text-lg leading-relaxed">
                     {comment.comment}
                   </p>
                   
-                  <div className="mt-6 flex items-center justify-between">
-                    <div className="text-xl">
+                  <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                    <div className="text-lg sm:text-xl">
                       {renderStars(comment.rating)}
                     </div>
                     <div className="text-yellow-500 text-sm font-medium transition-all duration-300 opacity-0 group-hover:opacity-100">
@@ -87,11 +87,11 @@ const CommentSection = () => {
                   </div>
                 </div>
                 
-                <div className="md:w-1/3">
+                <div className="sm:w-full lg:w-1/3 h-48 sm:h-auto">
                   <img
                     src={comment.image}
                     alt={`Evento con ${comment.name}`}
-                    className="w-full h-full object-cover rounded-b-xl md:rounded-l-none md:rounded-r-xl"
+                    className="w-full h-full object-cover rounded-b-xl sm:rounded-r-xl sm:rounded-l-none"
                   />
                 </div>
               </div>

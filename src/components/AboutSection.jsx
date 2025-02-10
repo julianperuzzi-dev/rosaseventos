@@ -65,7 +65,7 @@ const AboutSection = () => {
               <img
                 src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg"
                 alt="Eventos Especiales"
-                className="w-full h-[400px] object-cover rounded-lg brightness-90 group-hover:brightness-110 transition-all duration-500"
+                className="w-full md:h-[400px] h-60 object-cover rounded-lg brightness-90 group-hover:brightness-110 transition-all duration-500"
               />
               <div className="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
                 <h3 className="text-2xl font-light">Eventos Especiales</h3>
