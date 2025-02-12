@@ -4,17 +4,17 @@ const CommentSection = () => {
   const comments = [
     {
       id: 1,
-      name: "Matías Fernández Quiroga",
-      comment: "¡Una experiencia única che! La organización fue impecable, el ambiente increíble y la atención personalizada me dejó sin palabras. El DJ la rompió toda la noche, la verdad que superó todas mis expectativas. ¡Los felicito por semejante evento!",
+      name: "Matías Fernández",
+      comment: "La verdad que quedé re contento con todo. La organización fue impecable, el ambiente estaba re copado y la atención fue de primera. El DJ la rompió toda la noche, perreo intenso. Recomendadisimo!",
       timestamp: "Hace 2 meses",
-      location: "Santa Lucia, San Juan",
+      location: "Santa Lucía, San Juan",
       image: "https://i.pinimg.com/736x/bd/bb/a9/bdbba923f80a65ceb3778751b4a78a76.jpg",
       rating: 5
     },
     {
       id: 2,
-      name: "Valentina Bianchi Pescarmona",
-      comment: "Me quedé maravillada con todo el evento. La decoración era digna de revista, la música perfectamente seleccionada y ni hablar de la comida ¡alta cocina! Se nota que hay un equipo muy profesional detrás. Ya reservé para el próximo evento, ¡no me lo pierdo por nada!",
+      name: "Valentina Bianchi",
+      comment: "Muy lindo todo! La decoración estaba re linda, como sacada de revista. La música tremenda. Se nota que saben lo que hacen. Ya les dije a mis amigas que si hacen algo, los llamen a ustedes. Gracias por todo!",
       timestamp: "Hace 15 días",
       location: "Rivadavia, San Juan",
       image: "https://i.pinimg.com/736x/3c/4d/5f/3c4d5fc80d9dbad325c0369667917aad.jpg",
@@ -22,22 +22,15 @@ const CommentSection = () => {
     },
     {
       id: 3,
-      name: "Joaquín Lautaro Andrade",
-      comment: "¡Qué noche inolvidable! Cada detalle estaba pensado, desde la recepción hasta el cierre. El personal súper atento, el catering de primer nivel y el show en vivo fue espectacular. Sin dudas el mejor evento al que asistí en mucho tiempo. ¡Los voy a recomendar a todos mis conocidos!",
-      timestamp: "Hace 7 días",
+      name: "Joaquín Andrade",
+      comment: "¡Qué noche! La pasé genial, todo estuvo perfecto. El dj un crack, la comida estaba riquísima y el lugar quedó espectacular. Se nota que le ponen onda a lo que hacen. ¡Los felicito y los recomiendo!",
+      timestamp: "Hace 3 semanas",
       location: "Zonda, San Juan",
       image: "https://i.pinimg.com/736x/d2/5b/72/d25b72639324b555c66da3c7698c7e4d.jpg",
       rating: 5
     },
-    {
-      id: 4,
-      name: "Luciana Benitez Sáenz",
-      comment: "¡Buenísimo todo! La organización fue brillante, el lugar estaba hermoso y la música increíble. Me encantó la atención al detalle en cada aspecto del evento. El servicio de bebidas premium fue un golazo, y el personal súper amable. ¡Ya quiero que llegue el próximo!",
-      timestamp: "Hace 3 meses",
-      location: "Rawson, San Juan",
-      image: "https://i.pinimg.com/736x/fc/c9/b0/fcc9b097ee3df2dc3e4f31bd088d27a5.jpg",
-      rating: 5
-    }
+
+   
   ];
 
   const renderStars = (rating) => {

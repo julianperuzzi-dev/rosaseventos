@@ -4,6 +4,7 @@ import {
   FiZap,
   FiMusic,
   FiActivity,
+  FiSunset,
   FiArrowRight,
   FiPlus,
   FiMinus,
@@ -12,10 +13,31 @@ import {
 const products = [
   {
     id: 1,
-    name: "Luces Inteligentes",
-    description: "Sistema de iluminación de última generación con control total sobre la atmósfera de tu evento.",
+    name: "Sonido Premium",
+    description:
+      "Experiencia sonora inmersiva con la más alta fidelidad y potencia del mercado. Ideal para eventos que requieren claridad y profundidad en cada nota.",
+    icon: FiMusic,
+    image: "https://images.pexels.com/photos/635928/pexels-photo-635928.jpeg",
+    price: "$249.000",
+    specs: [
+      { label: "Potencia", value: "10,000W RMS" },
+      { label: "Respuesta", value: "20Hz-20kHz" },
+      {label: "SNR", value: ">120dB" },
+    ],
+    features: [
+      "Array lineal de última generación para una cobertura uniforme.",
+      "Procesamiento digital avanzado para un sonido cristalino.",
+      "Cobertura de 360 grados, perfecto para eventos grandes.",
+      "Monitoreo en tiempo real para ajustes precisos durante el evento.",
+    ],
+  },
+  {
+    id: 2,
+    name: "Iluminación del Evento",
+    description:
+      "Luces dinámicas y efectos visuales que transforman cualquier espacio en una fiesta inolvidable. Perfecto para crear ambientes vibrantes y llenos de energía.",
     icon: FiZap,
-    image: "https://images.pexels.com/photos/9376869/pexels-photo-9376869.jpeg",
+    image: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg",
     price: "$199.000",
     specs: [
       { label: "Potencia", value: "100,000 Lumens" },
@@ -23,37 +45,39 @@ const products = [
       { label: "Colores", value: "16.7M" },
     ],
     features: [
-      "Control total vía aplicación móvil",
-      "Integración con sistemas de audio",
-      "Modos preconfigurados para cada ocasión",
-      "Bajo consumo energético",
-    ],
-  },
-  {
-    id: 2,
-    name: "Sonido Premium",
-    description: "Experiencia sonora inmersiva con la más alta fidelidad y potencia del mercado.",
-    icon: FiMusic,
-    image: "https://images.pexels.com/photos/14536014/pexels-photo-14536014.jpeg",
-    price: "$249.000",
-    specs: [
-      { label: "Potencia", value: "10,000W RMS" },
-      { label: "Respuesta", value: "20Hz-20kHz" },
-      { label: "SNR", value: ">120dB" },
-    ],
-    features: [
-      "Array lineal de última generación",
-      "Procesamiento digital avanzado",
-      "Cobertura de 360 grados",
-      "Monitoreo en tiempo real",
+      "Luces giratorias y estroboscópicas para crear efectos dinámicos.",
+      "Control total vía aplicación móvil para personalización en tiempo real.",
+      "Integración con sistemas de audio para sincronización perfecta.",
+      "Modos preconfigurados para bodas, fiestas y eventos corporativos.",
     ],
   },
   {
     id: 3,
+    name: "Iluminación Ambiental",
+    description:
+      "Crea atmósferas únicas con iluminación suave y decorativa. Ideal para fondos fotográficos, decoración de salones y ambientes acogedores.",
+    icon: FiSunset,
+    image: "https://images.pexels.com/photos/442540/pexels-photo-442540.jpeg",
+    price: "$99.000",
+    specs: [
+      { label: "Temperatura", value: "2700K-6500K" },
+      { label: "Control", value: "Dimmer / WiFi" },
+      { label: "Colores", value: "RGB Personalizable" },
+    ],
+    features: [
+      "Iluminación suave que evita fotos quemadas y crea fondos uniformes.",
+      "Tintado de ambientes con colores personalizados para cada ocasión.",
+      "Perfecto para fotografías: resalta detalles sin sobreexponer.",
+      "Decora salones con luces LED de bajo consumo y alta eficiencia.",
+    ],
+  },
+  {
+    id: 4,
     name: "Efectos Especiales",
-    description: "Elementos visuales y efectos atmosféricos que transformarán tu evento en una experiencia única.",
+    description:
+      "Elementos visuales y efectos atmosféricos que transformarán tu evento en una experiencia única e inolvidable.",
     icon: FiActivity,
-    image: "https://images.pexels.com/photos/1047443/pexels-photo-1047443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "https://images.pexels.com/photos/5175593/pexels-photo-5175593.jpeg",
     price: "$79.000",
     specs: [
       { label: "Alcance", value: "Hasta 8m" },
@@ -61,10 +85,10 @@ const products = [
       { label: "Capacidad", value: "3L/min" },
     ],
     features: [
-      "Pirotecnia fría de última generación",
-      "Sistema de CO2 criogénico",
-      "Máquinas de niebla programables",
-      "Control sincronizado con música",
+      "Pirotecnia fría de última generación para un impacto visual seguro.",
+      "Máquinas de humo y niebla para crear atmósferas mágicas.",
+      "Confeti brillante y lluvia de estrellas para momentos especiales.",
+      "Control sincronizado con música para un espectáculo envolvente.",
     ],
   },
 ];
@@ -76,12 +100,17 @@ const ServicesSection = () => {
   // Animaciones
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   const scaleUp = {
     hidden: { scale: 0.9, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 0.6 } },
+    visible: { scale: 1, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const slideIn = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
@@ -107,9 +136,6 @@ const ServicesSection = () => {
             <p className="text-xl md:text-2xl font-light max-w-2xl">
               {products[activeProduct].description}
             </p>
-            {/* <div className="md:mt-4 md:text-6xl text-4xl text-orange-300/90 md:font-semibold">
-              <span className="text-white font-extralight text-base">Desde</span>  {products[activeProduct].price}
-            </div> */}
           </motion.div>
 
           {/* Specs Grid */}
@@ -155,7 +181,7 @@ const ServicesSection = () => {
                   <motion.div
                     key={index}
                     className="flex items-start space-x-4 text-gray-300 hover:text-white transition-colors"
-                    variants={scaleUp}
+                    variants={slideIn}
                   >
                     <FiArrowRight className="w-5 h-5 mt-1" />
                     <span className="text-lg font-light">{feature}</span>
@@ -170,7 +196,7 @@ const ServicesSection = () => {
       {/* Product Navigation */}
       <div className="bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
             {products.map((product, index) => (
               <motion.button
                 key={product.id}

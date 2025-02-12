@@ -7,7 +7,7 @@ const Gallery = () => {
   const imageData = [
     {
       url: "https://images.pexels.com/photos/11055637/pexels-photo-11055637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Boda Elegante",
+      alt: "Bodas",
       caption: "Boda Elegante",
       description: "Celebraciones únicas que reflejan el amor y la elegancia.",
     },
