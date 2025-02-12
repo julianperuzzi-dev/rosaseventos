@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Calendar } from 'lucide-react'; // Agregamos el ícono de Calendar
+import { Menu, X, Calendar } from 'lucide-react';
 import logo from '../assets/logo rosas.png';
 
 const Navbar = () => {
@@ -21,8 +21,8 @@ const Navbar = () => {
     { href: '#hero', label: 'Inicio' },
     { href: '#about', label: 'Sobre Nosotros' },
     { href: '#services', label: 'Servicios' },
-    { href: '#gallery', label: 'Galería' }, // Nueva sección
-    { href: '#reservations', label: 'Contacto' },
+    { href: '#gallery', label: 'Galería' },
+    { href: '#contact', label: 'Contacto' },
   ];
 
   const menuVariants = {
@@ -44,6 +44,11 @@ const Navbar = () => {
     },
   };
 
+  // Función para cerrar el menú móvil
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -63,7 +68,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="ROSAS EVENTOS"
-              className="h-10 w-auto" // Ajustamos el tamaño del logo
+              className="h-10 w-auto"
             />
             <span className="text-white text-xl font-light">ROSAS EVENTOS</span>
           </motion.div>
@@ -82,12 +87,12 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href="#reservations" // Enlace a la sección de reservas
+              href="#form"
               className="flex items-center bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Calendar className="w-5 h-5 mr-2" /> {/* Ícono de reserva */}
+              <Calendar className="w-5 h-5 mr-2" />
               Reservar
             </motion.a>
           </div>
@@ -114,13 +119,22 @@ const Navbar = () => {
             exit="closed"
             variants={menuVariants}
           >
+            {/* Botón de cierre (X) */}
+            <button
+              className="absolute top-6 right-6 text-white p-2"
+              onClick={closeMobileMenu}
+            >
+              <X size={24} />
+            </button>
+
+            {/* Contenido del menú móvil */}
             <div className="flex flex-col items-center justify-center h-full space-y-8 p-4">
               {menuItems.map((item) => (
                 <motion.a
                   key={item.href}
                   href={item.href}
                   className="text-white text-2xl font-medium"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMobileMenu} // Cierra el menú al hacer clic
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -128,12 +142,13 @@ const Navbar = () => {
                 </motion.a>
               ))}
               <motion.a
-                href="#reservations" // Enlace a la sección de reservas
+                href="#form"
                 className="flex items-center bg-white text-black px-8 py-3 rounded text-lg mt-4"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={closeMobileMenu} // Cierra el menú al hacer clic
               >
-                <Calendar className="w-5 h-5 mr-2" /> {/* Ícono de reserva */}
+                <Calendar className="w-5 h-5 mr-2" />
                 Reservar
               </motion.a>
             </div>

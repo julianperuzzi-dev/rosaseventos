@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
 
             <a
-              href="https://wa.me/5492644529390" 
+              href="https://wa.me/+5492646996941" 
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-2 px-8 py-3 

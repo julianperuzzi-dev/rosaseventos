@@ -35,7 +35,7 @@ const CombinedContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = '+5492644529390';
+    const phoneNumber = '5492646996941';
     const message = `Hola, mi nombre es ${formData.nombre}. Estoy interesado en el siguiente evento:
     
     - Tipo de Evento: ${formData.tipoEvento}
@@ -50,7 +50,7 @@ const CombinedContactSection = () => {
   };
 
   return (
-    <section id="reservations" className="relative min-h-screen bg-black text-white">
+    <section id="contact" className="relative min-h-screen bg-black text-white">
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg"
@@ -133,7 +133,7 @@ const CombinedContactSection = () => {
 
           {/* Right Column - Contact Form */}
           <motion.div {...fadeInUp}>
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 h-full">
+            <div id="form" className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 h-full">
               <h2 className="text-2xl font-bold text-white mb-6">Formulario de Contacto</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>

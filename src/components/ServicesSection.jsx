@@ -107,9 +107,9 @@ const ServicesSection = () => {
             <p className="text-xl md:text-2xl font-light max-w-2xl">
               {products[activeProduct].description}
             </p>
-            <div className="md:mt-4 md:text-6xl text-4xl text-orange-300/90 md:font-semibold">
+            {/* <div className="md:mt-4 md:text-6xl text-4xl text-orange-300/90 md:font-semibold">
               <span className="text-white font-extralight text-base">Desde</span>  {products[activeProduct].price}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Specs Grid */}

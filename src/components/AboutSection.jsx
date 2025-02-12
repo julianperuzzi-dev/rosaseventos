@@ -156,7 +156,7 @@ const AboutSection = () => {
                 <FiArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </motion.a>
               <motion.a
-                href="https://wa.me/5492644529390"
+                href="https://wa.me/5492646996941"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center sm:justify-start space-x-3 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-500 px-8 py-4 rounded-lg transition-all duration-300"
