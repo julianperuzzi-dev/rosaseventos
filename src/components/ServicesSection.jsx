@@ -101,9 +101,9 @@ const ServicesSection = () => {
             animate="visible"
             variants={fadeIn}
           >
-            <h1 className="text-4xl md:text-6xl font-light mb-4">
+            <h4 className="text-4xl md:text-6xl font-light mb-4">
               {products[activeProduct].name}
-            </h1>
+            </h4>
             <p className="text-xl md:text-2xl font-light max-w-2xl">
               {products[activeProduct].description}
             </p>
