@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 const ParallaxSection = () => {
   return (
     <Parallax
-      bgImage="https://images.pexels.com/photos/30505250/pexels-photo-30505250/free-photo-of-joyful-outdoor-wedding-reception-celebration.jpeg"
+      bgImage="https://images.pexels.com/photos/27726876/pexels-photo-27726876/free-photo-of-moda-pareja-amor-luces.jpeg"
       strength={300}
       className="relative flex items-center justify-center bg-cover bg-center bg-black mb-20"
       bgImageStyle={{ objectFit: 'cover' }} 
