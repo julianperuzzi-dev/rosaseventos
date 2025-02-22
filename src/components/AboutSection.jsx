@@ -63,7 +63,7 @@ const AboutSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
-                src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg"
+                src="https://images.pexels.com/photos/9388571/pexels-photo-9388571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Eventos Especiales"
                 className="w-full md:h-[400px] h-60 object-cover rounded-lg brightness-90 group-hover:brightness-110 transition-all duration-500"
               />
@@ -81,7 +81,7 @@ const AboutSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
-                src="https://i.pinimg.com/736x/0e/5a/5c/0e5a5cc72823e6545e66f839ac7e2abb.jpg"
+                src="https://images.pexels.com/photos/27726876/pexels-photo-27726876/free-photo-of-moda-pareja-amor-luces.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Producción Profesional"
                 className="w-full h-[300px] object-cover rounded-lg brightness-90 group-hover:brightness-110 transition-all duration-500"
               />
@@ -115,7 +115,7 @@ const AboutSection = () => {
                 producción integral de eventos.
               </p>
               <p className="leading-relaxed">
-                Con más de <span className="font-normal">5 años de experiencia</span> en 
+                Con más de <span className="font-normal">20 años de experiencia</span> en 
                 la industria, nuestro equipo de expertos ha perfeccionado el arte de 
                 crear momentos inolvidables, desde bodas íntimas hasta grandes 
                 eventos corporativos.
@@ -128,7 +128,7 @@ const AboutSection = () => {
               variants={fadeInUp}
             >
               <div>
-                <h3 className="text-3xl font-light">5+</h3>
+                <h3 className="text-3xl font-light">20+</h3>
                 <p className="text-gray-400">Años de experiencia</p>
               </div>
               <div>

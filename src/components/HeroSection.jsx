@@ -27,7 +27,8 @@ const HeroSection = () => {
       >
         <source
           // src="https://videos.pexels.com/video-files/6558963/6558963-hd_1920_1080_25fps.mp4"
-          src="https://videos.pexels.com/video-files/3188991/3188991-hd_1920_1080_25fps.mp4"
+          // src="https://videos.pexels.com/video-files/3188991/3188991-hd_1920_1080_25fps.mp4"
+          src="https://videos.pexels.com/video-files/12623589/12623589-hd_1920_1080_25fps.mp4"
           type="video/mp4"
         />
         Tu navegador no soporta el elemento de video.

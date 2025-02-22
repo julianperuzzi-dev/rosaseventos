@@ -12,7 +12,7 @@ const Gallery = () => {
       description: "Celebraciones únicas que reflejan el amor y la elegancia.",
     },
     {
-      url: "https://images.pexels.com/photos/20380887/pexels-photo-20380887/free-photo-of-mujer-fiesta-partido-modelo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      url: "https://images.pexels.com/photos/8466257/pexels-photo-8466257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Cumpleaños de Quince",
       caption: "Cumpleaños de Quince",
       description: "Transformamos tus sueños en una fiesta inolvidable.",
@@ -24,14 +24,14 @@ const Gallery = () => {
       description: "Celebrando una vida llena de momentos especiales.",
     },
     {
-      url: "https://images.pexels.com/photos/30505247/pexels-photo-30505247/free-photo-of-lively-night-party-with-dancing-attendees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      url: "https://images.pexels.com/photos/6032061/pexels-photo-6032061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Aniversario de Bodas",
       caption: "Aniversario de Bodas",
       description: "Renovando votos con estilo y sofisticación.",
     },
    
     {
-      url: "https://images.pexels.com/photos/6224694/pexels-photo-6224694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      url: "https://images.pexels.com/photos/13788569/pexels-photo-13788569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Evento Corporativo",
       caption: "Evento Corporativo",
       description: "Experiencias profesionales que inspiran.",
